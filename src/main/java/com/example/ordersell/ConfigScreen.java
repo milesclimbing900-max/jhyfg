@@ -288,13 +288,13 @@ public class ConfigScreen extends Screen {
         private final BooleanSupplier lit;
 
         CuteButton(int x, int y, int w, int h, Supplier<String> label, BooleanSupplier lit, PressAction onPress) {
-            super(x, y, w, h, Text.literal(label.get()), onPress, DEFAULT_NARRATION_SUPPLIER);
+            super(x, y, w, h, net.minecraft.text.Text.literal(label.get()), onPress, DEFAULT_NARRATION_SUPPLIER);
             this.label = label;
             this.lit = lit;
         }
 
         @Override
-        public void renderWidget(DrawContext c, int mx, int my, float delta) {
+        public void drawIcon(DrawContext c, int mx, int my, float delta) {
             Config cfg = Config.get();
             int x = getX(), y = getY(), w = getWidth(), h = getHeight();
             boolean on = lit.getAsBoolean();
