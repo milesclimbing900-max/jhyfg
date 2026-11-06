@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "ordersell",
+  "version": "${version}",
+  "name": "Order Auto Sell",
+  "description": "Automatically clicks Sell, checks the price on the Confirm Sell screen, and either confirms or refreshes.",
+  "authors": [],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.example.ordersell.OrderSellClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.18.1",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
